@@ -17,7 +17,7 @@ class PredictRequest(BaseModel):
 async def load_model():
     """Load the PyTorch model when the app starts"""
     global model
-    model_path = os.environ.get("MODEL_PATH", "model.pt")  # Use env variable if provided
+    model_path = os.environ.get("MODEL_PATH", "yolov8l.pt")  # Use env variable if provided
     if not os.path.exists(model_path):
         raise FileNotFoundError(f"Model file not found at {model_path}")
 
@@ -47,3 +47,4 @@ async def predict(req: PredictRequest):
         return {"result": out.cpu().numpy().tolist()}
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
+
