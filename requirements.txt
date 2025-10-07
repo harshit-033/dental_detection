@@ -1,7 +1,5 @@
 fastapi
 uvicorn
-gunicorn
 torch
-torchvision
-pillow
-boto3
+pydantic
+
