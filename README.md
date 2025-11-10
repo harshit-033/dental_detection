@@ -6,9 +6,11 @@ This project focuses on detecting and classifying **dental diseases** using **Co
 
 ---
 
+
 ## 🔍 Project Overview
 
 This project explores the potential of **AI in medical imaging**, specifically dental X-rays. Using a custom dataset of **8105 images**, the model was trained to detect and classify multiple dental conditions with high precision and speed.
+
 
 ---
 
