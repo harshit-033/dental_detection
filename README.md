@@ -1,59 +1,72 @@
-# dental_detection
+# 🦷 DentaScanAI – AI-Powered Dental Health Analysis
 
-# 🦷 Dental Disease Detection using YOLOv8
+![Project Preview](assets/dentalscan_preview.png)
 
-This project focuses on detecting and classifying **dental diseases** using **Computer Vision and Deep Learning**. It leverages the **Ultralytics YOLOv8** model to identify various dental issues from X-ray images, aiming to assist dental professionals with AI-powered diagnosis.
-
----
-
-
-## 🔍 Project Overview
-
-This project explores the potential of **AI in medical imaging**, specifically dental X-rays. Using a custom dataset of **8105 images**, the model was trained to detect and classify multiple dental conditions with high precision and speed.
-
+[![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)](https://www.python.org/)
+[![YOLOv8](https://img.shields.io/badge/YOLOv8-Object%20Detection-red?logo=ultralytics)](https://github.com/ultralytics/ultralytics)
+[![OpenCV](https://img.shields.io/badge/OpenCV-Computer%20Vision-green?logo=opencv)](https://opencv.org/)
+[![Deep Learning](https://img.shields.io/badge/Deep%20Learning-PyTorch-orange?logo=pytorch)](https://pytorch.org/)
+[![Hackathon Project](https://img.shields.io/badge/Event-MEDHA%202025%20(IIT%20Bombay)-brightgreen)]()
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ---
 
-## 🧩 Dataset Details
+## 🚀 Overview
 
-Total images: **8105**  
-- 📂 **6484** images for training  
-- 📁 **1621** images for validation/testing  
+**DentaScanAI** is an AI-powered web application built to assist in **dental health analysis** through **image-based diagnosis**.  
+It uses **Deep Learning (YOLOv8-L)** to detect and classify dental issues from X-ray images and integrates **real-time doctor consultation**, **AI-generated health reports**, and **clinic recommendations** — all within one platform.
 
-The dataset includes labeled images of various dental conditions such as:  
-🦷 Cavities 🦷 Plaque 🦷 Tooth Fractures 🦷 Root Infection 🦷 Gum Disease  
-
-*(You can modify or expand the categories based on your dataset.)*
+This project was developed during **MEDHA-2025 (IIT Bombay Edition)** Hackathon hosted by **GL Bajaj Institute of Technology & Management**, as part of a 36-hour hackathon sprint.
 
 ---
 
-## ⚙️ Technical Details
+## 🧩 Project Features
 
-- **Framework:** Ultralytics YOLOv8L  
-- **Language:** Python  
-- **Libraries:** OpenCV, NumPy, Ultralytics, Torch  
-- **GPU:** NVIDIA GeForce RTX 3050 (6 GB)  
-- **Training Duration:** ~2 days  
-
----
-
-## 📊 Validation Results
-
-| Metric | Score |
-|--------|-------|
-| 🏁 mAP50 (for main class) | **0.753** |
-| 📈 Overall mAP50-95 | **0.576** |
-| ⚡ Speed | **0.3 ms preprocess | 40.4 ms inference per image** |
+- 🧠 **AI Model (YOLOv8-L)** trained on **2400+ dental X-ray images** across **9 categories**.  
+- ⚙️ **80-20 Train-Test Split** with **48 epochs** of training.  
+- 📈 Achieved **~75–80% accuracy** during evaluation.  
+- 🩺 **AI-Powered Diagnosis:** Detects and classifies dental conditions automatically.  
+- 🧾 **AI-Generated Reports:** Summarizes detected issues and recommended next steps.  
+- 👩‍⚕️ **Doctor Connect:** Real-time chat and video consultations with dentists.  
+- 🏥 **Nearby Clinics:** Suggests local dental clinics for quick appointments.  
+- 💬 **Home Remedies:** Offers temporary relief suggestions based on detected issue.  
 
 ---
 
-## 🧠 Model Workflow
+## ⚙️ Tech Stack
+
+| Component | Technology |
+|------------|-------------|
+| **Model** | YOLOv8-L (Ultralytics) |
+| **Language** | Python |
+| **Libraries** | OpenCV, NumPy, Pandas, Torch, Ultralytics |
+| **Frontend** | HTML, CSS, JavaScript, React (optional) |
+| **Backend** | Flask / FastAPI |
+| **Database** | MongoDB / Firebase |
+| **Deployment** | Local Server (Hackathon Build) |
+| **GPU Used** | NVIDIA GeForce RTX 3050 (6 GB) |
+
+---
+
+## 📊 Model Performance
+
+| Metric | Result |
+|--------|--------|
+| Training Images | 2400 |
+| Epochs | 48 |
+| Accuracy | ~75–80% |
+| Dataset Split | 80% Train / 20% Test |
+
+---
+
+## 🔄 Workflow
 
 ```mermaid
 graph TD
-A[Data Collection] --> B[Data Preprocessing]
-B --> C[Annotation and Labeling]
-C --> D[Model Training using YOLOv8L]
-D --> E[Validation & Testing]
-E --> F[Real-time Inference System]
-F --> G[Result Visualization & API Integration]
+A[Dataset Collection & Preprocessing] --> B[Annotation & Labeling]
+B --> C[YOLOv8-L Model Training]
+C --> D[Evaluation & Accuracy Testing]
+D --> E[Integration with Backend API]
+E --> F[Frontend Web Interface]
+F --> G[Real-time Inference & User Interaction]
+
